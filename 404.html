@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        // This script will redirect to index.html while preserving the path.
+        // It's a client-side redirect.
+        var pathSegmentsToKeep = 1; // Change this if your base URL has more segments
+                                    // e.g., if repo is 'my-app' and index.html is directly under it, this is 1.
+                                    // If you have 'my-app/subfolder/index.html', this would be 2.
+
+        var l = window.location;
+        // Build the new path by combining the base URL and the original path
+        // The `l.pathname.split('/').slice(0, pathSegmentsToKeep).join('/')` part
+        // extracts the base path up to your repository name.
+        // The `l.search` and `l.hash` preserve query parameters and hash fragments.
+        l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            l.pathname.split('/').slice(0, pathSegmentsToKeep).join('/') + '/?' +
+            // The key part: using `p=` to pass the original path to `index.html`
+            'p=' +
+            l.pathname.slice(1) + // Remove leading slash for the passed path
+            l.search + l.hash
+        );
+    </script>
+</head>
+<body>
+    <p>Redirecting to the main page...</p>
+</body>
+</html>

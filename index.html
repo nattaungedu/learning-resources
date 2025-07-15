@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NattaungEdu</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <button id="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
+        <img src="/favicon/logo.png" alt="NattaungEdu Logo" class="logo">
+        <span class="site-title">NattaungEdu</span>
+    </div>
+
+    <div class="header-right">
+        <div class="search-container">
+            <input type="text" id="global-search" placeholder="Search...">
+            <button id="search-btn" aria-label="Search">
+                <span id="search-btn-icon"></span>
+            </button>
+        </div>
+        <button id="dark-mode-btn" aria-label="Toggle dark mode">
+            <span id="dark-mode-icon"></span>
+        </button>
+    </div>
+</header>
+<div id="breadcrumbs"></div>
+<div id="sidebar-overlay"></div>
+<div id="sidebar">
+    <div class="sidebar-header">
+        <h3>Content Navigation</h3>
+        <button id="sidebar-close">&times;</button>
+    </div>
+    <div id="tree-container"></div>
+</div>
+
+<div id="container">
+    <!-- Cards or content will be inserted here -->
+</div>
+
+<footer>
+    <div class="footer-content">
+        Developed by <a href="mailto:kothein.dev@gmail.com">Ko Thein</a>
+    </div>
+</footer>
+<!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+ <script src="marked.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
